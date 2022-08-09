@@ -7,7 +7,8 @@ setup(
     author="kavorite",
     url="https://github.com/kavorite/deq",
     install_requires=[
-        "dm_haiku>=0.0.7" "jax>=0.3.14" "optax>=0.1",
+        "dm_haiku>=0.0.7",
+        "jax>=0.3",
         "diffrax>=0.2",
         "reparam @ git+https://github.com/kavorite/reparam@v0.0.1#egg=reparam",
     ],
