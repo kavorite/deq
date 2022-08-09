@@ -2,7 +2,7 @@ from setuptools import find_namespace_packages, setup
 
 setup(
     name="deq",
-    version="0.0.1",
+    version="0.0.2",
     description="deep equilibrium networks for dm-haiku",
     author="kavorite",
     url="https://github.com/kavorite/deq",

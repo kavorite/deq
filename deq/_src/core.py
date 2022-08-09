@@ -3,6 +3,7 @@ from typing import NamedTuple, Optional
 import diffrax as dax
 import haiku as hk
 import jax
+import jax.numpy as jnp
 import numpy as np
 from reparam import FiLM
 
@@ -40,7 +41,7 @@ class DEQCell(hk.Module):
     def __init__(self, cell, max_depth=None, activation=jax.nn.silu, name=None):
         super().__init__(name=name)
         self.cell = cell
-        self.film = FiLM()
+        self.film = FiLM(gate=jax.nn.tanh)
         self.actn = activation
         self.max_depth = max_depth
 
